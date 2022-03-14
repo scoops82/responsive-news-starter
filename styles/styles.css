@@ -1,0 +1,193 @@
+header :is(h1, h2, h3) {
+  margin-block-end: 0;
+}
+
+body {
+  text-align: center;
+  font-size: clamp(1rem, 1rem + 1vw, 2.5rem);
+}
+
+.wrapper {
+  max-width: 1200px;
+  gap: 1em;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  body {
+    text-align: left;
+  }
+  .goth-list > li {
+    max-width: calc(50% - 1em);
+  }
+  .furry-list > li {
+    max-width: calc(50% - 1em);
+  }
+  .obvious-list > li {
+    max-width: calc(33.33% - 1em);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  body {
+    text-align: left;
+  }
+  .goth-list > li {
+    flex-basis: calc(25% - calc(3em / 4));
+  }
+  .furry-list > li {
+    width: calc(33.33% - calc(2em / 3));
+  }
+  .obvious-list > li {
+    width: calc(20% - calc(4em / 5));
+  }
+}
+
+.page-header {
+  display: flex;
+  background-image: url(https://wfuogb.com/wp-content/uploads/2021/09/reddit.jpeg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-color: hsl(207deg 22% 29%);
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  min-height: 20vh;
+  align-items: center;
+  font-size: 3rem;
+  background-size: contain;
+  margin-block-end: 1em;
+  justify-content: center;
+}
+
+/* Sticky Header */
+@media screen {
+  .page-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.page-heading {
+  text-align: center;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  border: 1px solid;
+  border-radius: 0.5em;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #fff;
+  background-color: #000;
+}
+
+a.btn {
+  display: inline-block;
+  vertical-align: top;
+}
+
+p {
+  max-width: 60ch;
+  margin: auto;
+  margin-block-end: 2em;
+}
+
+.articles > li {
+  margin-block-end: 1em;
+}
+
+.articles > li:last-child {
+  margin-block-end: 1em;
+}
+
+.story-header-image {
+  margin-block-end: 1em;
+}
+
+/* GOTH SECTION */
+.goth .section-header {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center right;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  background-color: #000;
+  padding: 1em;
+  margin-top: 20vh;
+}
+
+/* FURRY SECTION */
+.furry .section-header {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center right;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  background-color: #000;
+  padding: 1em;
+}
+
+/* OBVIOUS SECTION  */
+.obvious .section-header {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center right;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  background-color: #000;
+  padding: 1em;
+}
+
+/* DARK THEME */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+  /* GOTH SECTION */
+  .goth .section-header {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center right;
+    color: #000;
+    text-shadow: 0 0 2px #fff;
+    background-color: #fff;
+    padding: 1em;
+  }
+
+  /* FURRY SECTION */
+  .furry .section-header {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center right;
+    color: #000;
+    text-shadow: 0 0 2px #fff;
+    background-color: #fff;
+    padding: 1em;
+  }
+
+  /* OBVIOUS SECTION  */
+  .obvious .section-header {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center right;
+    color: #000;
+    text-shadow: 0 0 2px #fff;
+    background-color: #fff;
+    padding: 1em;
+  }
+}
